@@ -4,6 +4,7 @@ from .models import desti
 
 # Create your views here.
 def welcome(request):
+    '''
     dest = desti()
     dest.price = 100
     dest.img = 'destination_1.jpg'
@@ -26,5 +27,7 @@ def welcome(request):
     dest2.offer = False
 
     dests = [dest,dest1,dest2]
+    '''
+    dests = desti.objects.all()
 
     return render(request, 'index2.html',{'dests':dests})
